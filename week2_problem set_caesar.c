@@ -7,7 +7,6 @@
 
 int main(int argc, string argv[])
 {
-    string cipher[] = {};
     int d = 0;
     int flag = 0, key = 0;
     if (argc != 2)
