@@ -83,14 +83,13 @@ void print_winner(void)
 {
     // TODO
     string temp;
-    int t_votes = 0, c = 0;
+    int t_votes = 0, c = 0, flag =0;
     bool isSorted;
     isSorted= true;
     for (int x=0; x < candidate_count - 1; x++)
     {
-        for (int i=0; i < candidate_count - x - 1; i++)
+        for (int i=0; i < candidate_count-x-1; i++)
         {
-            
             if(candidates[i].votes > candidates[i+1].votes)
             {
                 isSorted = false;
@@ -112,7 +111,7 @@ void print_winner(void)
     }
     //printf("%s\n", candidates[0].name);
     //printf("%s\n", candidates[1].name);
-    if(isSorted)
+    if(isSorted && candidates[candidate_count-1].votes==candidates[candidate_count-2].votes)
     {
         c=candidate_count-1;
     }
